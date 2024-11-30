@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 
 # Hear error_detail:sys is nothing but deflaut parameter decalration you can also pass trackables and some other modules or objects of same fuction as a module
 def error_message_details(error,error_detail:sys):
@@ -21,4 +21,3 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
     
-
