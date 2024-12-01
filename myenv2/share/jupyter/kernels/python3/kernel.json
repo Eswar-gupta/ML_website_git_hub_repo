@@ -1,0 +1,14 @@
+{
+ "argv": [
+  "c:/Users/gurra/OneDrive/Desktop/1Acads/sem_3_winter_vacation/krishnaik_2/ML_website_git_hub_repo/myenv2\\python.exe",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3 (ipykernel)",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}
