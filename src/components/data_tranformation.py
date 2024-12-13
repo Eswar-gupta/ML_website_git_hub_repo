@@ -1,3 +1,42 @@
+"""
+- What this file is doing 
+This has mainly 1 classes - DataTramformation(The other class DataTramformationConfig is nothing but provideds paths and path related thing it will deal)
+
+DataTramformationConfig
+- get_data_tramformation_obj()
+    After performing eda on our data we came to know what are the numerical and catagorical(that is non-numerical) features and we know what are input and output features clearly
+    So For training model we need a black box
+                                  ________________
+    input_data(a data farame) -->| Black box      | --> The new traformed data
+    This black box is coloum tranformer -->self explainer it tranform the data in the coloums
+        so to tranform it ask to thing as input num_pipeline,cat_pipelines that is we need to give input how to deal with this data
+    
+        Numerical data undergoes the following
+            1) imputer - if any data is missing it replace with the medina there
+            2)standard scalar adjust the mean to 0 and standard deviation to 1
+        catorical data
+            1)inputer
+            2)One Hot encoding
+            3)standard scalar - with mean false
+
+        and finally this fuction return this black box containg this Coloum tranformer
+
+- intitiate the data tranformation
+    Hear we take the input data frame and divide it into 
+        1 - train,test
+        2 - input,output features
+        and give only input features in both train and test and then concatenate the tranformed features which are also in numpy array foramt to the output feature
+
+save_obj - So we written a utils function to save objects in genral
+So .pkl is file foramt that classes in bit stream 
+
+It's not just class being stored there all the parameters it learned like median etc... so that we no need compute them agin for this class
+The advatages are it takes less space and can be easily reloded as python and can be used else where also
+
+even in next time we are going to convert the model that we create also into a.pkl file
+                                                                  ----------------
+
+"""
 import numpy as np
 import pandas as pd
 import os
