@@ -5,7 +5,7 @@ from src.pipelines.predict_pipeline import CustomData, PredictPipeline
 
 # Load your existing model and data preprocessor (if applicable)
 
-st.title("Your Improved Prediction App")  # Set the app title
+st.title("Gayathri is a dog website")  # Set the app title
 
 # Define input fields for user interaction
 gender = st.selectbox("Gender", ("male", "female"))
